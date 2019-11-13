@@ -31,7 +31,7 @@
       </tfoot>
     </table>
   </div>
-
+<% if cart_subtotal_cents > 0 %>
   <div class="row">
     <div class="col-xs-12">
       <%= form_tag orders_path do %>
@@ -48,5 +48,13 @@
       <% end %>
     </div>
   </div>
+  <% else %>
+    <div class="row">
+    <div class="alert alert-info" role="alert">
+      Cart is empty!
+      <span style="float: right;"><%= link_to 'View Products', :root %></span>
+    </div>
+  </div>
+  <% end %>
 
 </section>
