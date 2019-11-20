@@ -49,7 +49,10 @@
         <li><%= link_to 'Signup',  [:signup] %></li>
         <li><%= link_to 'Login',  [:login] %></li>
         <% else %>
-        <li><%= link_to 'Logout',  [:logout] %></li>
+        <li><%= link_to 'Logout',  [:logout] %></li>  
+        <li>
+        <a href="" class="text-danger" id="user-tag" ><%= current_user.name %></a>
+        </li>
         <% end %>
       </ul>
     </div>
